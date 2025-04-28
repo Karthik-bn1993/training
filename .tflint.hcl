@@ -1,6 +1,8 @@
 plugin "aws" {
-    enabled = true
-    region = "us-east-1"
+  enabled = true
+  version = "0.39.0" # Specify a version or version constraint
+  source  = "github.com/terraform-linters/tflint-ruleset-aws"
+  region  = "us-east-1"
 }
 
 #enforce that all the resources must have tags
