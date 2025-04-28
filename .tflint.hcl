@@ -14,7 +14,7 @@ rule "terraform_required_version" {
     enabled = true
 }
 
-rule "terrafform_unused_declarations" {
+rule "terraform_unused_declarations" {
     enabled = true
 }
 
