@@ -1,4 +1,4 @@
-name: Terraform use-case
+name: Terraform
  
 on:
   push:
