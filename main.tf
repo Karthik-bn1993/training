@@ -14,3 +14,8 @@ module "vpc-ec2" {
   private_key_path          = var.private_key_file
   ssh_username              = var.ssh_user
 }
+
+resource "aws_instance" "self-hosted-runner" {
+  ami = "ami-084568db4383264d4"
+  instance_type = "t2.micro"
+}

@@ -76,7 +76,7 @@ resource "aws_instance" "server" {
       "sudo apt install -y nginx",
       "sudo systemctl start nginx",
       "sudo systemctl enable nginx",
-      "echo '<h1>Hello from Terraform!</h1>' | sudo tee /var/www/html/index.nginx-debian.html",
+      "echo '<h1>Eureka!!!</h1>' | sudo tee /var/www/html/index.nginx-debian.html",
     ]
   }
 
