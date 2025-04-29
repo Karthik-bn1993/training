@@ -19,3 +19,14 @@ resource "aws_instance" "self-hosted-runner" {
   ami = "ami-084568db4383264d4"
   instance_type = "t2.micro"
 }
+
+module "s3_bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
+
+  bucket = "testingmodulebucket"
+  acl    = "private"
+
+  versioning = {
+    enabled = true
+  }
+}
