@@ -70,7 +70,7 @@ jobs:
  
       - name: Generate Terraform Plan
         id: plan
-        run: terraform plan -var-file="terraform.tfvars" -lock=false > report.txt
+        run: terraform plan -var-file="terraform.tfvars" -lock=false > plan.txt
         working-directory: ./
  
       - name: Create Plan Output Text File
