@@ -114,7 +114,7 @@ jobs:
       - name: Apply Terraform
         id: apply
         run: |
-           export TF_LOG="ERROR"
+           export TF_LOG="DEBUG"
            terraform apply -auto-approve -lock=false -var-file="terraform.tfvars"
         working-directory: ./
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
