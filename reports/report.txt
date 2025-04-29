@@ -2,19 +2,19 @@
 This file was generated during the github actions workflow run.
 
 ## Terraform Plan Output
-[command]/home/runner/work/_temp/003cce49-b8ef-4a23-be54-c9ebb6189959/terraform-bin plan -var-file=terraform.tfvars -lock=false
-[0m[1mmodule.vpc-ec2.aws_eip.nat_eip: Refreshing state... [id=eipalloc-0fc80df4fec63523d][0m
+[command]/home/runner/work/_temp/dc1a4c52-c17d-4784-9111-1fb5d702a40d/terraform-bin plan -var-file=terraform.tfvars -lock=false
 [0m[1mmodule.vpc-ec2.aws_vpc.task_vpc: Refreshing state... [id=vpc-054378d1f38cb6fc5][0m
+[0m[1mmodule.vpc-ec2.aws_eip.nat_eip: Refreshing state... [id=eipalloc-0fc80df4fec63523d][0m
 [0m[1maws_instance.self-hosted-runner: Refreshing state... [id=i-0034ee2c4f0fe1e85][0m
 [0m[1mmodule.vpc-ec2.aws_internet_gateway.task_igw: Refreshing state... [id=igw-01bb449c1ae7b2479][0m
 [0m[1mmodule.vpc-ec2.aws_subnet.private_subnet: Refreshing state... [id=subnet-0ad33b5273ef23d1e][0m
 [0m[1mmodule.vpc-ec2.aws_subnet.public_subnet: Refreshing state... [id=subnet-07eb58a9ba45c3b89][0m
 [0m[1mmodule.vpc-ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-05582f5a51c77daaf][0m
-[0m[1mmodule.vpc-ec2.aws_nat_gateway.nat_gw: Refreshing state... [id=nat-0125cc46f1f1ac7a3][0m
 [0m[1mmodule.vpc-ec2.aws_route_table.public_route_table: Refreshing state... [id=rtb-076fd81f5d7e37c65][0m
-[0m[1mmodule.vpc-ec2.aws_route_table.private_route_table: Refreshing state... [id=rtb-0855c43ceaaf68d0d][0m
+[0m[1mmodule.vpc-ec2.aws_nat_gateway.nat_gw: Refreshing state... [id=nat-0125cc46f1f1ac7a3][0m
 [0m[1mmodule.vpc-ec2.aws_instance.server: Refreshing state... [id=i-0616f6cb8f778eb1f][0m
 [0m[1mmodule.vpc-ec2.aws_route_table_association.public_rt_association: Refreshing state... [id=rtbassoc-0e02ee4c81322adde][0m
+[0m[1mmodule.vpc-ec2.aws_route_table.private_route_table: Refreshing state... [id=rtb-0855c43ceaaf68d0d][0m
 [0m[1mmodule.vpc-ec2.aws_route_table_association.private_rt_association: Refreshing state... [id=rtbassoc-06b170a12533e666e][0m
 
 [0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
@@ -22,6 +22,6 @@ This file was generated during the github actions workflow run.
 [0mTerraform has compared your real infrastructure against your configuration
 and found no differences, so no changes are needed.
 ::debug::Terraform exited with code 0.
-::debug::stdout: [0m[1mmodule.vpc-ec2.aws_eip.nat_eip: Refreshing state... [id=eipalloc-0fc80df4fec63523d][0m%0A[0m[1mmodule.vpc-ec2.aws_vpc.task_vpc: Refreshing state... [id=vpc-054378d1f38cb6fc5][0m%0A[0m[1maws_instance.self-hosted-runner: Refreshing state... [id=i-0034ee2c4f0fe1e85][0m%0A[0m[1mmodule.vpc-ec2.aws_internet_gateway.task_igw: Refreshing state... [id=igw-01bb449c1ae7b2479][0m%0A[0m[1mmodule.vpc-ec2.aws_subnet.private_subnet: Refreshing state... [id=subnet-0ad33b5273ef23d1e][0m%0A[0m[1mmodule.vpc-ec2.aws_subnet.public_subnet: Refreshing state... [id=subnet-07eb58a9ba45c3b89][0m%0A[0m[1mmodule.vpc-ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-05582f5a51c77daaf][0m%0A[0m[1mmodule.vpc-ec2.aws_nat_gateway.nat_gw: Refreshing state... [id=nat-0125cc46f1f1ac7a3][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table.public_route_table: Refreshing state... [id=rtb-076fd81f5d7e37c65][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table.private_route_table: Refreshing state... [id=rtb-0855c43ceaaf68d0d][0m%0A[0m[1mmodule.vpc-ec2.aws_instance.server: Refreshing state... [id=i-0616f6cb8f778eb1f][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table_association.public_rt_association: Refreshing state... [id=rtbassoc-0e02ee4c81322adde][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table_association.private_rt_association: Refreshing state... [id=rtbassoc-06b170a12533e666e][0m%0A%0A[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m%0A%0A[0mTerraform has compared your real infrastructure against your configuration%0Aand found no differences, so no changes are needed.%0A
+::debug::stdout: [0m[1mmodule.vpc-ec2.aws_vpc.task_vpc: Refreshing state... [id=vpc-054378d1f38cb6fc5][0m%0A[0m[1mmodule.vpc-ec2.aws_eip.nat_eip: Refreshing state... [id=eipalloc-0fc80df4fec63523d][0m%0A[0m[1maws_instance.self-hosted-runner: Refreshing state... [id=i-0034ee2c4f0fe1e85][0m%0A[0m[1mmodule.vpc-ec2.aws_internet_gateway.task_igw: Refreshing state... [id=igw-01bb449c1ae7b2479][0m%0A[0m[1mmodule.vpc-ec2.aws_subnet.private_subnet: Refreshing state... [id=subnet-0ad33b5273ef23d1e][0m%0A[0m[1mmodule.vpc-ec2.aws_subnet.public_subnet: Refreshing state... [id=subnet-07eb58a9ba45c3b89][0m%0A[0m[1mmodule.vpc-ec2.aws_security_group.ec2_sg: Refreshing state... [id=sg-05582f5a51c77daaf][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table.public_route_table: Refreshing state... [id=rtb-076fd81f5d7e37c65][0m%0A[0m[1mmodule.vpc-ec2.aws_nat_gateway.nat_gw: Refreshing state... [id=nat-0125cc46f1f1ac7a3][0m%0A[0m[1mmodule.vpc-ec2.aws_instance.server: Refreshing state... [id=i-0616f6cb8f778eb1f][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table_association.public_rt_association: Refreshing state... [id=rtbassoc-0e02ee4c81322adde][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table.private_route_table: Refreshing state... [id=rtb-0855c43ceaaf68d0d][0m%0A[0m[1mmodule.vpc-ec2.aws_route_table_association.private_rt_association: Refreshing state... [id=rtbassoc-06b170a12533e666e][0m%0A%0A[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m%0A%0A[0mTerraform has compared your real infrastructure against your configuration%0Aand found no differences, so no changes are needed.%0A
 ::debug::stderr: 
 ::debug::exitcode: 0
