@@ -70,7 +70,7 @@ jobs:
  
  
       - name: Run Terraform Plan and Save Output
-        run: terraform plan -var-file="terraform.tfvars" -lock=false -no-color > plan.txt
+        run: terraform plan -no-color > plan.txt
         working-directory: ./
 
       - name: Generate Terraform docs and Save to README.md
@@ -83,7 +83,6 @@ jobs:
       - name: Append Terraform Plan to README.md
         id: plan
         run: |
-          echo -e "\n## Terraform Plan Output\n" >> README.md
           cat plan.txt >> README.md
         working-directory: ./  
         
@@ -91,7 +90,7 @@ jobs:
         run: |
           git config --global user.name "karthik-bn1993"
           git config --global user.email "karthik.neelakanta1993@gmail.com"
-          git add reports/report.txt
+          git add reports/plan.txt
           git commit -m "Add deployment report"
           git push
         env:
