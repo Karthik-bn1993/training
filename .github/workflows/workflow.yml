@@ -92,10 +92,10 @@ jobs:
         working-directory: ./
      
 
-      - name: Apply Terraform
-        id: apply
-        run: terraform apply -auto-approve -lock=false
-        working-directory: ./
+      #- name: Apply Terraform
+       # id: apply
+        #run: terraform apply -auto-approve -lock=false
+        #working-directory: ./
 
       - name: Apply Destroy
         id: destroy
