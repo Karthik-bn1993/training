@@ -73,16 +73,21 @@ jobs:
         run: terraform plan -var-file="terraform.tfvars" -lock=false > plan.txt
         working-directory: ./
  
-      - name: Create Plan Output Text File
-        id: plan_report
+      - name: Run Terraform Plan and Save output
+        run: terraform plan -no-color > plan.txt
+
+      - name: Generate Terraform docs and Save to README.md
+        uses: terraform-docs/gh-actions@v1.1.0
+        with: 
+          config-file: .terraform-docs.yml
+          output-file: README.md
+          output-method: inject
+
+      - name: Append Terraform Plan to README.md
         run: |
-          mkdir -p reports
-          echo "#Deployment Report" > reports/report.txt
-          echo "This file was generated during the github actions workflow run." >> reports/report.txt
-          echo "" >> reports/report.txt
-          echo "## Terraform Plan Output" >> reports/report.txt
-          cat plan.txt >> reports/report.txt
-        working-directory: ./
+          echo -e "\n## Terraform Plan Output\n" >> README.md
+          cat plan.txt >> README.md
+        
       - name: Commit and push the report
         run: |
           git config --global user.name "karthik-bn1993"
