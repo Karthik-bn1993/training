@@ -73,7 +73,7 @@ jobs:
         id: plan_report
         run: |
           mkdir -p reports
-          echo "#Deployment Report" > reports/report.txt
+          echo "#Deployment Report" > reports/report.md
           echo "This file was generated during the github actions workflow run." >> reports/report.txt
           echo "" >> reports/report.md
           echo "## Terraform Plan Output" >> reports/report.md
@@ -84,7 +84,7 @@ jobs:
         run: |
           git config --global user.name "karthik-bn1993"
           git config --global user.email "karthik.neelakanta1993@gmail.com"
-          git add reports/report.txt
+          git add reports/report.md
           git commit -m "Add deployment report"
           git push
         env:
@@ -99,7 +99,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const planOutput = fs.readFileSync('./terraform/plan.txt', 'utf8');
+            const planOutput = fs.readFileSync('./plan.txt', 'utf8');
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
