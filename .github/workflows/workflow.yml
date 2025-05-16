@@ -68,13 +68,10 @@ jobs:
         run: terraform fmt && terraform validate
         working-directory: ./
  
-      - name: Generate Terraform Plan
-        id: plan
-        run: terraform plan -var-file="terraform.tfvars" -lock=false > plan.txt
-        working-directory: ./
  
-      - name: Run Terraform Plan and Save output
-        run: terraform plan -no-color > plan.txt
+      - name: Run Terraform Plan and Save Output
+        run: terraform plan -var-file="terraform.tfvars" -lock=false -no-color > plan.txt
+        working-directory: ./
 
       - name: Generate Terraform docs and Save to README.md
         uses: terraform-docs/gh-actions@v1.1.0
@@ -84,9 +81,11 @@ jobs:
           output-method: inject
 
       - name: Append Terraform Plan to README.md
+        id: plan
         run: |
           echo -e "\n## Terraform Plan Output\n" >> README.md
           cat plan.txt >> README.md
+        working-directory: ./  
         
       - name: Commit and push the report
         run: |
