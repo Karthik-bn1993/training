@@ -15,18 +15,6 @@ module "vpc-ec2" {
   ssh_username              = var.ssh_user
 }
 
-resource "aws_instance" "self-hosted-runner" {
-  ami = "ami-084568db4383264d4"
-  instance_type = "t2.micro"
-}
 
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-  version = "4.7.0"
-  bucket = "testingmodulebucket270425"
-  
 
-  versioning = {
-    enabled = true
-  }
-}
+
